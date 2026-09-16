@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f0fdf4;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* FRMLOGIN (PANTALLA DE ACCESO) */
+.login-wrapper {
+    background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-card h2 {
+    color: #0f766e;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.login-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+/* NAVEGACIÓN Y ESTRUCTURA GLOBAL */
+.app-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+.top-menu {
+    background: #0d9488;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+}
+
+.top-menu .brand-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.top-menu nav {
+    display: flex;
+    gap: 8px;
+}
+
+.top-menu nav a {
+    color: #ccfbf1;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.top-menu nav a:hover,
+.top-menu nav a.active {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+.top-menu nav a.btn-logout {
+    color: #fecdd3;
+    margin-left: 12px;
+}
+
+.top-menu nav a.btn-logout:hover {
+    background: rgba(225, 29, 72, 0.25);
+    color: #ffffff;
+}
+
+/* TARJETAS DE CONTENIDO */
+.card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+}
+
+.card h3 {
+    color: #0f766e;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #ccfbf1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* FORMULARIOS Y CONTROLES UI */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0d9488;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: #0f766e;
+}
+
+/* TABLA Y GRID (lstxgs) */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+th {
+    background-color: #f0fdf4;
+    color: #0f766e;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge-canino {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-felino {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.btn-action {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    margin-right: 4px;
+}
+
+.btn-edit {
+    background-color: #3b82f6;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+}
